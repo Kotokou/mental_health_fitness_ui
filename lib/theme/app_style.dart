@@ -17,7 +17,7 @@ class _Color {
   late final Color blue = const Color(0xFFAEAFF7);
   late final Color maron = const Color(0xFF371B34);
   late final Color violet = const Color(0xFFEF5DA8);
-  late final Color orange = const Color(0xFFAEAFF7);
+  late final Color orange = const Color(0xFFF09A59);
   late final Color blurViolet = const Color(0xFFFCDDEC);
   late final Color blurOrange = const Color.fromARGB(30, 240, 158, 84);
   late final Color blurGreen = const Color(0xFFA0E3E2);

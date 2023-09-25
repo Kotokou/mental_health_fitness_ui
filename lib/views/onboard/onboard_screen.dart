@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:mental_health_fitness_ui/constants/assets.dart';
 import 'package:mental_health_fitness_ui/constants/strings.dart';
 import 'package:mental_health_fitness_ui/theme/app_style.dart';
-import 'package:mental_health_fitness_ui/views/home/home_screen.dart';
+import 'package:mental_health_fitness_ui/views/home/nav_bar_screen.dart';
 import 'package:sizer/sizer.dart';
 
 class OnboardScreen extends StatelessWidget {
@@ -64,7 +64,7 @@ class OnboardScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
+                        builder: (context) => const NavBarScreen(),
                       ),
                       (route) => false,
                     );

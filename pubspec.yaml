@@ -32,40 +32,40 @@ flutter:
     - assets/images/
     - assets/nav_bar_icons/
 
-  fonts:
-    - family: Alegreya
-      fonts:
-        - asset: fonts/Alegreya-Black.ttf
-        - asset: fonts/Alegreya-BlackItalic.ttf
-        - asset: fonts/Alegreya-Bold.ttf
-        - asset: fonts/Alegreya-BoldItalic.ttf
-        - asset: fonts/Alegreya-ExtraBold.ttf
-        - asset: fonts/Alegreya-ExtraBoldItalic.ttf
-        - asset: fonts/Alegreya-Italic-VariableFont_wght.ttf
-        - asset: fonts/Alegreya-Italic.ttf
-        - asset: fonts/Alegreya-Medium.ttf
-        - asset: fonts/Alegreya-MediumItalic.ttf
-        - asset: fonts/Alegreya-Regular.ttf
-        - asset: fonts/Alegreya-SemiBold.ttf
-        - asset: fonts/Alegreya-SemiBoldItalic.ttf
-        - asset: fonts/Alegreya-VariableFont_wght.ttf
+  # fonts:
+  #   - family: Alegreya
+  #     fonts:
+  #       - asset: fonts/Alegreya-Black.ttf
+  #       - asset: fonts/Alegreya-BlackItalic.ttf
+  #       - asset: fonts/Alegreya-Bold.ttf
+  #       - asset: fonts/Alegreya-BoldItalic.ttf
+  #       - asset: fonts/Alegreya-ExtraBold.ttf
+  #       - asset: fonts/Alegreya-ExtraBoldItalic.ttf
+  #       - asset: fonts/Alegreya-Italic-VariableFont_wght.ttf
+  #       - asset: fonts/Alegreya-Italic.ttf
+  #       - asset: fonts/Alegreya-Medium.ttf
+  #       - asset: fonts/Alegreya-MediumItalic.ttf
+  #       - asset: fonts/Alegreya-Regular.ttf
+  #       - asset: fonts/Alegreya-SemiBold.ttf
+  #       - asset: fonts/Alegreya-SemiBoldItalic.ttf
+  #       - asset: fonts/Alegreya-VariableFont_wght.ttf
 
-    - family: Alegreya Sans
-      fonts:
-        - asset: fonts/AlegreyaSans-Black.ttf
-        - asset: fonts/AlegreyaSans-BlackItalic.ttf
-        - asset: fonts/AlegreyaSans-Bold.ttf
-        - asset: fonts/AlegreyaSans-BoldItalic.ttf
-        - asset: fonts/AlegreyaSans-ExtraBold.ttf
-        - asset: fonts/AlegreyaSans-ExtraBoldItalic.ttf
-        - asset: fonts/AlegreyaSans-Italic.ttf
-        - asset: fonts/AlegreyaSans-Medium.ttf
-        - asset: fonts/AlegreyaSans-MediumItalic.ttf
-        - asset: fonts/AlegreyaSans-Regular.ttf
-        - asset: fonts/AlegreyaSans-Thin.ttf
-        - asset: fonts/AlegreyaSans-ThinItalic.ttf
-        - asset: fonts/AlegreyaSans-Light.ttf
-        - asset: fonts/AlegreyaSans-LightItalic.ttf
+  #   - family: Alegreya Sans
+  #     fonts:
+  #       - asset: fonts/AlegreyaSans-Black.ttf
+  #       - asset: fonts/AlegreyaSans-BlackItalic.ttf
+  #       - asset: fonts/AlegreyaSans-Bold.ttf
+  #       - asset: fonts/AlegreyaSans-BoldItalic.ttf
+  #       - asset: fonts/AlegreyaSans-ExtraBold.ttf
+  #       - asset: fonts/AlegreyaSans-ExtraBoldItalic.ttf
+  #       - asset: fonts/AlegreyaSans-Italic.ttf
+  #       - asset: fonts/AlegreyaSans-Medium.ttf
+  #       - asset: fonts/AlegreyaSans-MediumItalic.ttf
+  #       - asset: fonts/AlegreyaSans-Regular.ttf
+  #       - asset: fonts/AlegreyaSans-Thin.ttf
+  #       - asset: fonts/AlegreyaSans-ThinItalic.ttf
+  #       - asset: fonts/AlegreyaSans-Light.ttf
+  #       - asset: fonts/AlegreyaSans-LightItalic.ttf
 
 flutter_launcher_icons:
   android: "launcher_icon"
