@@ -3,11 +3,12 @@ class Strings {
 
   static const String onboardTitle = "It’s Ok Not To Be OKAY !!";
   static const String onboardButtonTitle = "Let Us Help You";
-  static const String welcomeBack = "Welcome back, ";
-  static const String sarina = "Sarina!";
+  static const String welcomeBack = "Welcome back";
+  static const String sarina = ", Sarina!";
   static const String askHowFeeling = "How are you feeling today ?";
   static const String happy = "Happy";
-  static const String calm = "Relax";
+  static const String calm = "Calm";
+  static const String relax = "Relax";
   static const String focus = "Focus";
   static const String todayTask = "Today’s Task";
   static const String perGroupMeetup = "Peer Group Meetup";
