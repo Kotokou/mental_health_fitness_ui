@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mental_health_fitness_ui/theme/app_style.dart';
 import 'package:mental_health_fitness_ui/theme/app_theme.dart';
-import 'package:mental_health_fitness_ui/views/onboard/onboard_screen.dart';
+import 'package:mental_health_fitness_ui/views/home/home_screen.dart';
 import 'package:sizer/sizer.dart';
 
 class App extends StatelessWidget {
@@ -24,7 +24,7 @@ class App extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: AppTheme.theme,
           darkTheme: AppTheme.darkTheme,
-          home: const OnboardScreen(),
+          home: const HomeScreen(),
         );
       },
     );

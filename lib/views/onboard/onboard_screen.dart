@@ -62,10 +62,11 @@ class OnboardScreen extends StatelessWidget {
                     padding: EdgeInsets.symmetric(vertical: $styles.insets.sm),
                   ),
                   onPressed: () {
-                    Navigator.of(context).pushReplacement(
+                    Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(
                         builder: (context) => const HomeScreen(),
                       ),
+                      (route) => false,
                     );
                   },
                   child: Text(
