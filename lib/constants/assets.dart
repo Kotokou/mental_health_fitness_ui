@@ -4,7 +4,7 @@ class Assets {
   static const String avatar = "assets/images/avatar.png";
   static const String background = "assets/images/background.svg";
   static const String calm = "assets/images/calm.svg";
-  static const String cover = "assets/images/cover.svg";
+  static const String cover = "assets/images/cover.png";
   static const String focus = "assets/images/focus.svg";
   static const String hamburgerIcon = "assets/images/hamburger_icon.svg";
   static const String happy = "assets/images/happy.svg";
@@ -21,4 +21,9 @@ class Assets {
   static const String onMusic = "assets/nav_bar_icons/on_music.svg";
   static const String onHome = "assets/nav_bar_icons/on_home.svg";
   static const String setting = "assets/nav_bar_icons/setting.svg";
+
+  static const String link = "assets/images/link.svg";
+  static const String aleatoire = "assets/images/aleatoire.svg";
+  static const String playForward = "assets/images/play_forward.svg";
+  static const String playBack = "assets/images/play_back.svg";
 }

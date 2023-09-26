@@ -14,6 +14,7 @@ class AppStyle {
 @immutable
 class _Color {
   late final Color white = Colors.white;
+  late final Color black = Colors.black;
   late final Color blue = const Color(0xFFAEAFF7);
   late final Color maron = const Color(0xFF371B34);
   late final Color violet = const Color(0xFFEF5DA8);
