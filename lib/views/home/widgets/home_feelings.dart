@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mental_health_fitness_ui/theme/app_style.dart';
 import 'package:mental_health_fitness_ui/utils/database.dart';
@@ -41,7 +42,10 @@ class HomeFeelings extends StatelessWidget {
                 ),
               ],
             ),
-          );
+          ).animate().slideX(
+                duration: Duration(milliseconds: (300 + (index * 100))),
+                begin: 2,
+              );
         },
         separatorBuilder: (context, index) => SizedBox(width: 5.w),
         itemCount: 4,
