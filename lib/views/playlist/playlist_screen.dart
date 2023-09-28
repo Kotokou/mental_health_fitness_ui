@@ -42,118 +42,122 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
             $styles.insets.medium,
             0,
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Icon(
-                    Icons.expand_more,
-                    color: $styles.colors.black,
-                    size: $styles.insets.medium,
-                  ),
-                  const Spacer(),
-                  SvgPicture.asset(Assets.playlistIcon),
-                ],
-              ),
-              SizedBox(height: 4.h),
-              Text(
-                Strings.calmingPlaylist,
-                style: $styles.textStyles.titleMedium,
-              ),
-              SizedBox(height: 2.5.h),
-              Align(
-                alignment: Alignment.center,
-                child: Container(
-                  height: 30.h,
-                  width: 68.w,
-                  decoration: BoxDecoration(
-                    color: $styles.colors.blurViolet,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular($styles.insets.md),
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      Icons.expand_more,
+                      color: $styles.colors.black,
+                      size: $styles.insets.medium,
                     ),
-                    image: const DecorationImage(
-                      image: AssetImage(Assets.cover),
-                    ),
-                  ),
+                    const Spacer(),
+                    SvgPicture.asset(Assets.playlistIcon),
+                  ],
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: $styles.insets.small),
-                child: Align(
+                SizedBox(height: 4.h),
+                Text(
+                  Strings.calmingPlaylist,
+                  style: $styles.textStyles.titleMedium,
+                ),
+                SizedBox(height: 2.5.h),
+                Align(
                   alignment: Alignment.center,
-                  child: Column(
-                    children: [
-                      Text(
-                        Strings.rainOnGlass,
-                        style: $styles.textStyles.titleLargeMedium,
+                  child: Container(
+                    height: 30.h,
+                    width: 68.w,
+                    decoration: BoxDecoration(
+                      color: $styles.colors.blurViolet,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular($styles.insets.md),
                       ),
-                      Text(
-                        Strings.by,
-                        style: $styles.textStyles.bodySemiRegular,
+                      image: const DecorationImage(
+                        image: AssetImage(Assets.cover),
                       ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(height: 15.h),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SvgPicture.asset(Assets.link),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      SvgPicture.asset(Assets.playBack),
-                      SvgPicture.asset(Assets.playBack),
-                    ],
+                Padding(
+                  padding: EdgeInsets.only(top: $styles.insets.small),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Column(
+                      children: [
+                        Text(
+                          Strings.rainOnGlass,
+                          style: $styles.textStyles.titleLargeMedium,
+                        ),
+                        Text(
+                          Strings.by,
+                          style: $styles.textStyles.bodySemiRegular,
+                        ),
+                      ],
+                    ),
                   ),
-                  CircularPercentIndicator(
-                    backgroundColor: $styles.colors.blurViolet,
-                    progressColor: $styles.colors.violet,
-                    radius: 4.5.h,
-                    circularStrokeCap: CircularStrokeCap.round,
-                    lineWidth: 5,
-                    animation: true,
-                    animationDuration: 10000,
-                    percent: onPlay ? 1 : 0,
-                    center: Container(
-                      height: 8.h,
-                      width: 8.h,
-                      decoration: BoxDecoration(
-                        color: $styles.colors.blurViolet,
-                        shape: BoxShape.circle,
-                      ),
-                      child: GestureDetector(
-                        onTap: () {
-                          if (!onPlay) {
-                            setState(() {
-                              onPlay = (!onPlay);
-                            });
-                            _setTimer();
-                          } else {}
-                        },
-                        child: Icon(
-                          onPlay
-                              ? Icons.pause_rounded
-                              : Icons.play_arrow_rounded,
-                          color: $styles.colors.white,
-                          size: $styles.insets.md,
+                ),
+                SizedBox(height: 15.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SvgPicture.asset(Assets.link),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SvgPicture.asset(Assets.playBack),
+                        SvgPicture.asset(Assets.playBack),
+                      ],
+                    ),
+                    CircularPercentIndicator(
+                      backgroundColor: $styles.colors.blurViolet,
+                      progressColor: $styles.colors.violet,
+                      radius: 4.5.h,
+                      circularStrokeCap: CircularStrokeCap.round,
+                      lineWidth: 5,
+                      animation: true,
+                      animationDuration: 10000,
+                      percent: onPlay ? 1 : 0,
+                      center: Container(
+                        height: 8.h,
+                        width: 8.h,
+                        decoration: BoxDecoration(
+                          color: $styles.colors.blurViolet,
+                          shape: BoxShape.circle,
+                        ),
+                        child: GestureDetector(
+                          onTap: () {
+                            if (!onPlay) {
+                              setState(() {
+                                onPlay = (!onPlay);
+                              });
+                              _setTimer();
+                            } else {}
+                          },
+                          child: Icon(
+                            onPlay
+                                ? Icons.pause_rounded
+                                : Icons.play_arrow_rounded,
+                            color: $styles.colors.white,
+                            size: $styles.insets.md,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      SvgPicture.asset(Assets.playForward),
-                      SvgPicture.asset(Assets.playForward),
-                    ],
-                  ),
-                  SvgPicture.asset(Assets.aleatoire),
-                ],
-              ),
-            ],
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SvgPicture.asset(Assets.playForward),
+                        SvgPicture.asset(Assets.playForward),
+                      ],
+                    ),
+                    SvgPicture.asset(Assets.aleatoire),
+                  ],
+                ),
+                SizedBox(height: 5.h),
+              ],
+            ),
           ),
         ),
       ),

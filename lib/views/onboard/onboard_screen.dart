@@ -68,6 +68,7 @@ class OnboardScreen extends StatelessWidget {
                         type: PageTransitionType.fade,
                         child: const NavBarScreen(),
                         curve: Curves.bounceInOut,
+                        duration: const Duration(milliseconds: 500),
                       ),
                       (route) => false,
                     );
