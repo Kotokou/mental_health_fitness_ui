@@ -98,7 +98,7 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15.h),
+                SizedBox(height: 10.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -155,7 +155,7 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                     SvgPicture.asset(Assets.aleatoire),
                   ],
                 ),
-                SizedBox(height: 5.h),
+                SizedBox(height: 2.h),
               ],
             ),
           ),
