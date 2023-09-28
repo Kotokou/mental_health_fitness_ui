@@ -15,9 +15,9 @@ dependencies:
   google_fonts: ^6.1.0
   flutter_native_splash: ^2.3.2
   flutter_launcher_icons: ^0.13.1
-  cupertino_icons: ^1.0.2
-  animations: ^2.0.8
   flutter_animate: ^4.2.0+1
+  percent_indicator: ^4.2.3
+  page_transition: ^2.1.0
 
 dev_dependencies:
   flutter_test:

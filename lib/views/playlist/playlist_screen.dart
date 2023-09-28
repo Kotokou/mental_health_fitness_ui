@@ -1,12 +1,34 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mental_health_fitness_ui/constants/assets.dart';
 import 'package:mental_health_fitness_ui/constants/strings.dart';
 import 'package:mental_health_fitness_ui/theme/app_style.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:sizer/sizer.dart';
 
-class PlaylistScreen extends StatelessWidget {
+class PlaylistScreen extends StatefulWidget {
   const PlaylistScreen({super.key});
+
+  @override
+  State<PlaylistScreen> createState() => _PlaylistScreenState();
+}
+
+class _PlaylistScreenState extends State<PlaylistScreen> {
+  double val = 0;
+
+  bool onPlay = false;
+
+  _setTimer() {
+    Timer(
+      const Duration(milliseconds: 10000),
+      () {
+        setState(() {
+          onPlay = !(onPlay);
+        });
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -86,17 +108,39 @@ class PlaylistScreen extends StatelessWidget {
                       SvgPicture.asset(Assets.playBack),
                     ],
                   ),
-                  Container(
-                    height: 8.h,
-                    width: 8.h,
-                    decoration: BoxDecoration(
-                      color: $styles.colors.blurViolet,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(
-                      Icons.pause_rounded,
-                      color: $styles.colors.white,
-                      size: $styles.insets.md,
+                  CircularPercentIndicator(
+                    backgroundColor: $styles.colors.blurViolet,
+                    progressColor: $styles.colors.violet,
+                    radius: 4.5.h,
+                    circularStrokeCap: CircularStrokeCap.round,
+                    lineWidth: 5,
+                    animation: true,
+                    animationDuration: 10000,
+                    percent: onPlay ? 1 : 0,
+                    center: Container(
+                      height: 8.h,
+                      width: 8.h,
+                      decoration: BoxDecoration(
+                        color: $styles.colors.blurViolet,
+                        shape: BoxShape.circle,
+                      ),
+                      child: GestureDetector(
+                        onTap: () {
+                          if (!onPlay) {
+                            setState(() {
+                              onPlay = (!onPlay);
+                            });
+                            _setTimer();
+                          } else {}
+                        },
+                        child: Icon(
+                          onPlay
+                              ? Icons.pause_rounded
+                              : Icons.play_arrow_rounded,
+                          color: $styles.colors.white,
+                          size: $styles.insets.md,
+                        ),
+                      ),
                     ),
                   ),
                   Row(

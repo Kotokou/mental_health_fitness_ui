@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mental_health_fitness_ui/constants/assets.dart';
 import 'package:mental_health_fitness_ui/theme/app_style.dart';
@@ -69,7 +70,12 @@ class HomeTasks extends StatelessWidget {
                   ),
                 ),
               )
-              .toList(),
+              .toList()
+              .animate(interval: const Duration(milliseconds: 300))
+              .slideY(
+                begin: 2,
+                duration: const Duration(milliseconds: 300),
+              ),
         ),
       ),
     );
