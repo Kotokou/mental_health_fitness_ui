@@ -28,47 +28,53 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: $styles.colors.white,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.fromLTRB(
-            $styles.insets.medium,
-            5.h,
-            $styles.insets.medium,
-            0,
-          ),
+          padding: EdgeInsets.only(top: 5.h),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  SvgPicture.asset(Assets.hamburgerIcon),
-                  const Spacer(),
-                  CircleAvatar(
-                    radius: 7.w,
-                    backgroundColor: Colors.transparent,
-                    backgroundImage: const AssetImage(Assets.avatar),
-                  ),
-                ],
-              ),
-              SizedBox(height: 4.h),
-              Text.rich(
-                TextSpan(
-                  text: Strings.welcomeBack,
-                  style: $styles.textStyles.titleRegular,
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: $styles.insets.medium),
+                child: Row(
                   children: [
-                    TextSpan(
-                      text: Strings.sarina,
-                      style: $styles.textStyles.titleMedium,
+                    SvgPicture.asset(Assets.hamburgerIcon),
+                    const Spacer(),
+                    CircleAvatar(
+                      radius: 7.w,
+                      backgroundColor: Colors.transparent,
+                      backgroundImage: const AssetImage(Assets.avatar),
                     ),
                   ],
                 ),
-                textAlign: TextAlign.left,
               ),
               SizedBox(height: 4.h),
-              Text(
-                Strings.askHowFeeling,
-                style: $styles.textStyles.labelSmallRegular,
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: $styles.insets.medium),
+                child: Text.rich(
+                  TextSpan(
+                    text: Strings.welcomeBack,
+                    style: $styles.textStyles.titleRegular,
+                    children: [
+                      TextSpan(
+                        text: Strings.sarina,
+                        style: $styles.textStyles.titleMedium,
+                      ),
+                    ],
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              SizedBox(height: 4.h),
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: $styles.insets.medium),
+                child: Text(
+                  Strings.askHowFeeling,
+                  style: $styles.textStyles.labelSmallRegular,
+                ),
               ),
               SizedBox(height: 3.h),
-              // const HomeFeelings(),
               SizedBox(
                 height: 15.h,
                 child: ListView.separated(
@@ -118,91 +124,98 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: 4.h),
-              Text(
-                Strings.todayTask,
-                style: $styles.textStyles.labelSmallRegular,
+              Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: $styles.insets.medium),
+                child: Text(
+                  Strings.todayTask,
+                  style: $styles.textStyles.labelSmallRegular,
+                ),
               ),
               SizedBox(height: 2.h),
-              // const HomeTasks(),
               Expanded(
-                child: SingleChildScrollView(
-                  physics: const BouncingScrollPhysics(),
-                  child: Column(
-                    children: DB
-                        .tasks()
-                        .map(
-                          (e) => Container(
-                            margin: EdgeInsets.only(bottom: 3.h),
-                            padding: EdgeInsets.symmetric(
-                              vertical: $styles.insets.small,
-                              horizontal: $styles.insets.sm,
-                            ),
-                            height: 22.h,
-                            decoration: BoxDecoration(
-                              color: e.backgoundColor,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular($styles.insets.medium),
+                child: Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: $styles.insets.medium),
+                  child: SingleChildScrollView(
+                    physics: const BouncingScrollPhysics(),
+                    child: Column(
+                      children: DB
+                          .tasks()
+                          .map(
+                            (e) => Container(
+                              margin: EdgeInsets.only(bottom: 3.h),
+                              padding: EdgeInsets.symmetric(
+                                vertical: $styles.insets.small,
+                                horizontal: $styles.insets.sm,
                               ),
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  e.title,
-                                  style: $styles.textStyles.labelMedium,
+                              height: 22.h,
+                              decoration: BoxDecoration(
+                                color: e.backgoundColor,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular($styles.insets.medium),
                                 ),
-                                Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 50.w,
-                                      child: Text(
-                                        e.description,
-                                        style:
-                                            $styles.textStyles.bodySmallRegular,
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    e.title,
+                                    style: $styles.textStyles.labelMedium,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 50.w,
+                                        child: Text(
+                                          e.description,
+                                          style: $styles
+                                              .textStyles.bodySmallRegular,
+                                          textAlign: TextAlign.left,
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      SvgPicture.asset(e.image)
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        e.begin,
+                                        style: $styles.textStyles.bodyLargeBold
+                                            .copyWith(
+                                          color: e.color,
+                                        ),
                                         textAlign: TextAlign.left,
                                       ),
-                                    ),
-                                    const Spacer(),
-                                    SvgPicture.asset(e.image)
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      e.begin,
-                                      style: $styles.textStyles.bodyLargeBold
-                                          .copyWith(
-                                        color: e.color,
-                                      ),
-                                      textAlign: TextAlign.left,
-                                    ),
-                                    SizedBox(width: $styles.insets.small),
-                                    if (e.isReady)
-                                      SvgPicture.asset(Assets.isReady),
-                                    if (!e.isReady)
-                                      SvgPicture.asset(Assets.isComming),
-                                  ],
-                                ),
-                              ],
+                                      SizedBox(width: $styles.insets.small),
+                                      if (e.isReady)
+                                        SvgPicture.asset(Assets.isReady),
+                                      if (!e.isReady)
+                                        SvgPicture.asset(Assets.isComming),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
+                          )
+                          .toList()
+                          .animate(
+                            interval: const Duration(milliseconds: 500),
+                            onComplete: (_) {
+                              setState(() {
+                                secondAnimEnd = true;
+                              });
+                              if (firstAnimEnd) {
+                                widget.onHideBottomNavBar(false);
+                              }
+                            },
+                          )
+                          .slideY(
+                            begin: 2,
+                            duration: const Duration(milliseconds: 800),
                           ),
-                        )
-                        .toList()
-                        .animate(
-                          interval: const Duration(milliseconds: 500),
-                          onComplete: (_) {
-                            setState(() {
-                              secondAnimEnd = true;
-                            });
-                            if (firstAnimEnd) {
-                              widget.onHideBottomNavBar(false);
-                            }
-                          },
-                        )
-                        .slideY(
-                          begin: 2,
-                          duration: const Duration(milliseconds: 800),
-                        ),
+                    ),
                   ),
                 ),
               ),
