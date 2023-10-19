@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 final $styles = AppStyle();
@@ -26,68 +25,79 @@ class _Color {
 
 @immutable
 class _TextStyle {
-  late final TextStyle titleBigBold = GoogleFonts.alegreya(
-    color: const Color(0xFFFAFAFA),
+  late final TextStyle titleBigBold = const TextStyle(
+    fontFamily: 'Alegreya',
+    color: Color(0xFFFAFAFA),
     fontSize: 40,
     fontWeight: FontWeight.w700,
   );
 
-  late final TextStyle labelMedium = GoogleFonts.alegreya(
-    color: const Color(0xFF371B34),
+  late final TextStyle labelMedium = const TextStyle(
+    fontFamily: 'Alegreya',
+    color: Color(0xFF371B34),
     fontSize: 25,
     fontWeight: FontWeight.w500,
   );
 
-  late final TextStyle titleRegular = GoogleFonts.alegreya(
-    color: const Color(0xFF371B34),
+  late final TextStyle titleRegular = const TextStyle(
+    fontFamily: 'Alegreya',
+    color: Color(0xFF371B34),
     fontSize: 30,
     fontWeight: FontWeight.w400,
   );
 
-  final TextStyle titleMedium = GoogleFonts.alegreya(
-    color: const Color(0xFF371B34),
+  final TextStyle titleMedium = const TextStyle(
+    fontFamily: 'Alegreya',
+    color: Color(0xFF371B34),
     fontSize: 30,
     fontWeight: FontWeight.w500,
   );
 
-  late final TextStyle titleBold = GoogleFonts.alegreya(
-    color: const Color(0xFF371B34),
+  late final TextStyle titleBold = const TextStyle(
+    fontFamily: 'Alegreya',
+    color: Color(0xFF371B34),
     fontSize: 30,
     fontWeight: FontWeight.w700,
   );
 
-  late final TextStyle labelSmallRegular = GoogleFonts.alegreyaSans(
-    color: const Color(0xFF371B34),
+  late final TextStyle labelSmallRegular = const TextStyle(
+    fontFamily: 'Alegreya Sans',
+    color: Color(0xFF371B34),
     fontSize: 22,
     fontWeight: FontWeight.w400,
   );
 
-  late final TextStyle bodyRegular = GoogleFonts.alegreyaSans(
-    color: const Color(0xFF371B34),
+  late final TextStyle bodyRegular = const TextStyle(
+    fontFamily: 'Alegreya Sans',
+    color: Color(0xFF371B34),
     fontSize: 15,
     fontWeight: FontWeight.w400,
   );
 
-  late final TextStyle bodySemiRegular = GoogleFonts.alegreyaSans(
-    color: const Color(0xFF371B34),
+  late final TextStyle bodySemiRegular = const TextStyle(
+    fontFamily: 'Alegreya Sans',
+    color: Color(0xFF371B34),
     fontSize: 16,
     fontWeight: FontWeight.w400,
   );
 
-  late final TextStyle bodySmallRegular = GoogleFonts.alegreyaSans(
-    color: const Color(0xFF371B34),
+  late final TextStyle bodySmallRegular = const TextStyle(
+    fontFamily: 'Alegreya Sans',
+    color: Color(0xFF371B34),
     fontSize: 15,
     fontWeight: FontWeight.w300,
   );
 
-  late final TextStyle bodyLargeBold = GoogleFonts.alegreyaSans(
-    color: const Color(0xFFEF5DA8),
+  late final TextStyle bodyLargeBold = const TextStyle(
+    fontFamily: 'Alegreya Sans',
+    color: Color(0xFFEF5DA8),
     fontSize: 20,
     fontWeight: FontWeight.w700,
   );
 
-  late final TextStyle titleLargeMedium = GoogleFonts.alegreya(
-    color: const Color(0xFF371B34),
+  late final TextStyle titleLargeMedium = const TextStyle(
+    fontFamily: 'Alegreya',
+    color: Color(0xFF371B34),
     fontSize: 35,
     fontWeight: FontWeight.w500,
   );
